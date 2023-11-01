@@ -136,10 +136,9 @@ Abberation at Confused.Com
 
 # Agenda
 
-1. Disclaimer
 1. What are Cloud Developer Environments?
 1. What capabilities do they have?
-1. How much do they cost?
+1. Disclaimer
 1. Demo 1: This presentation is one!
 1. Demo 2: Intro gitpod workspace
 1. Demo 3: Dotnet API
@@ -154,6 +153,29 @@ Abberation at Confused.Com
 
 # What are Cloud Developer Environments?
 
+* Ephemeral developer environments that run on containers
+
+* Extremely configurable and consistent for all users
+
+* Create any source controlled environment you want and startup scripts in seconds
+
+* [Gitpod](https://gitpod.io/) and [github codespaces](https://github.com/features/codespaces) are the most well known
+
+* Where docker containers solved "it works on my machine"...
+
+* Cloud developer environments solve "so that's how I got that to work on my machine!" 
+
+<img src="images/gitpod.png" alt="Gitpod" >
+<img src="images/codespaces.png" alt="Codespaces" >
+
+???
+
+---
+
+# Gartner 2023
+
+<img src="images/gartner_2023.png" alt="Gartner 2023" style="width:700px;height:500px;">
+
 
 ???
 
@@ -161,26 +183,47 @@ Abberation at Confused.Com
 
 # What capabilities do they have?
 
-
-???
-
----
-
-# How much do they cost?
+<img src="images/works_everywhere.png" alt="Works Everywhere" style="width:800px;height:500px;">
 
 
 ???
 
 ---
 
-# Did you know?
+# What capabilities do they have?
 
-## If you go to github.dev for any [repo](https://github.com/mr-griffles/template.dotnet.api) in Github it will open up the repoistory in an online Visual studio code editor?
+* Lightning fast consistent developer environments
 
-## If you press "." on any file in a [repo](https://github.com/mr-griffles/template.dotnet.api) in Github it will open up the repoistory in an online Visual studio code editor? 
+* Based on container images so limitless platform e.g. [gitpod images](https://hub.docker.com/r/gitpod/workspace-full)
+
+* Configurable startup scripts to run in set orders
+
+* Prebuilds allow for faster startups
+
+* Share workspace with colleagues for testing and debugging
+
+* Environment variables
+
+* Gitpod uses yaml configuration and codespaces uses JSON
+
+* VS Code browser, desktop, Jetbrains rider etc
+
+* Gitpod is Github, Bitbucket and Gitlab, Codespaces is github only
+
+* Gitpod allows for private hosting
+
 
 ???
 
+---
+
+# Disclaimer
+
+![But...](images/not_using_github.png)
+
+**This is Tech Wowsers of the Potential Futuresphere!**
+
+### Remain Calm
 ---
 
 # Demo 1: This presentation is one!
@@ -210,7 +253,28 @@ vscode:
 
 ---
 
+# Did you know?
+
+## If you go to github.dev for any [repo](https://github.com/mr-griffles/template.dotnet.api) in Github it will open up the repoistory in an online Visual studio code editor?
+
+## If you press "." on any file in a [repo](https://github.com/mr-griffles/template.dotnet.api) in Github it will open up the repoistory in an online Visual studio code editor? 
+
+???
+
+---
+
 # Demo 2: Intro gitpod workspace
+
+[**.gitpod.yml**](https://github.com/mr-griffles/griffles.gitpod.test/blob/main/.gitpod.yml)
+
+1. Inits run only on workspace creation or prebuilds.
+1. Before runs every time at start of workspace opening.
+1. Commands run in sequence at start of workspace opening.
+1. You can have wait commands to ensure things open in order.
+1. You can call environment variables.
+1. The default image comes with loads of stuff installed!
+1. You can open up an application for nice dev experience.
+1. You can add specific VS code extensions.
 
 
 ???
@@ -218,6 +282,16 @@ vscode:
 ---
 
 # Demo 3: Dotnet API
+
+[**template.dotnet.api**](https://github.com/mr-griffles/template.dotnet.api)
+
+1. Customised docker image for dotnet.
+1. "Cde" nomenclature adopted so can use for gitpod or codespaces.
+1. Externalised bash scripts so can be reused across gitpod or codespaces.
+1. Prebuilds mean super quick opening times.
+1. Developer gets immediate application running on open.
+1. Docker running on docker!!
+1. Works on everyones machine!!!
 
 
 ???
@@ -249,7 +323,11 @@ vscode:
 
 * Continue to explore pros and cons of gitpod vs codespaces
 
-* Create a template for api backed by cosmos emulator for easy local dev
+* Create a template for dotnet api backed by cosmos emulator container for easy local dev
+
+* Create a template for python api backed by mongo container for easy local dev
+
+* Integrate github actions into more templates
 
 * Setup an architect cop kick start to talk through event catalog more
 
