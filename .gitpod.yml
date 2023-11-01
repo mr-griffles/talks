@@ -1,0 +1,15 @@
+tasks:
+  - name: Start web server
+    command: |
+      cd 00000000_template
+      python -m http.server 8000
+
+ports:
+  - port: 8000
+    onOpen: open-preview
+    visibility: public
+
+vscode:
+  extensions:
+    - ritwickdey.liveserver
+    - dracula-theme.theme-dracula
