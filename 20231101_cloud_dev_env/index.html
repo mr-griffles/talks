@@ -173,18 +173,38 @@ Abberation at Confused.Com
 
 ---
 
-# Demo 1: This presentation is one!
-
-
-???
-
----
-
 # Did you know?
 
 ## If you go to github.dev for any [repo](https://github.com/mr-griffles/template.dotnet.api) in Github it will open up the repoistory in an online Visual studio code editor?
 
 ## If you press "." on any file in a [repo](https://github.com/mr-griffles/template.dotnet.api) in Github it will open up the repoistory in an online Visual studio code editor? 
+
+???
+
+---
+
+# Demo 1: This presentation is one!
+
+* It is indeed overkill but this presentation was actually developed and is running in a cloud developer environment.
+
+```yaml
+tasks:
+  - name: Start web server
+    command: |
+      cd 00000000_template
+      python -m http.server 8000
+
+ports:
+  - port: 8000
+    onOpen: open-preview
+    visibility: public
+
+vscode:
+  extensions:
+    - ritwickdey.liveserver
+    - dracula-theme.theme-dracula
+```
+
 
 ???
 
